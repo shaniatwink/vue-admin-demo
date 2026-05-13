@@ -1,5 +1,193 @@
-# Vue 3 + Vite
+## 项目简介
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**vue\-admin\-demo** 是一个基于 Vue3 \+ Element Plus \+ Vue Router \+ Pinia 搭建的轻量化中后台管理系统模板。项目采用企业级后台项目规范开发，内置登录认证、权限路由、动态菜单、表格增删改查、全局请求拦截、页面布局等通用后台能力，开箱即用，无需重复搭建基础架构，是适配快速开发、工程化实战的优质 Vue 后台模板项目。
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 技术栈
+
+- **核心框架**：Vue3（组合式 API）
+
+- **UI 组件库**：Element Plus
+
+- **路由管理**：Vue Router 4
+
+- **状态管理**：Pinia
+
+- **网络请求**：Axios（封装请求/响应拦截）
+
+- **样式方案**：SCSS
+
+- **构建工具**：Vite
+
+## 项目功能
+
+- ✅ 用户登录、登出、Token 持久化存储，保障登录状态延续
+
+- ✅ 动态侧边栏菜单、精细化路由权限控制，适配不同角色权限场景
+
+- ✅ 全局请求拦截、接口异常统一处理、重复请求拦截
+
+- ✅ 经典后台布局：侧边栏 \+ 顶部导航 \+ 主体内容，适配主流后台系统
+
+- ✅ 基础表格全套能力：增删改查、分页、条件搜索、数据重置
+
+- ✅ 表单规则校验、弹窗二次封装、通用业务组件复用
+
+- ✅ 全程采用 Vue3 组合式 API 开发，业务逻辑高内聚，易维护、易复用
+
+## 项目结构
+
+```Plain Text
+vue-admin-demo
+├── public          # 静态资源文件
+├── src
+│   ├── assets      # 图片、全局样式等资源
+│   ├── components  # 全局公共复用组件
+│   ├── layout      # 后台全局布局组件（侧边栏、头部、面包屑）
+│   ├── router      # 路由配置、动态权限路由、路由守卫
+│   ├── store       # Pinia 全局状态管理（用户、权限、菜单）
+│   ├── utils       # 工具函数、Axios请求封装、权限工具
+│   ├── views       # 所有业务页面文件
+│   ├── App.vue     # 根组件
+│   └── main.js     # 项目入口文件
+├── .gitignore      # git忽略文件配置
+├── package.json    # 项目依赖配置
+└── vite.config.js  # Vite构建配置
+```
+
+## 快速启动
+
+1\. 安装项目依赖
+
+```Plain Text
+npm install
+```
+
+2\. 启动本地开发服务
+
+```Plain Text
+npm run dev
+```
+
+3\. 项目打包构建（部署使用）
+
+```Plain Text
+npm run build
+```
+
+## 项目亮点
+
+- 基于 Vue3 组合式 API 开发，按业务逻辑聚合代码，彻底解决 Options API 代码碎片化、维护困难的问题
+
+- 搭建完整企业级后台权限体系，支持动态路由生成、菜单权限差异化展示
+
+- 二次封装 Axios，统一配置请求头、Token携带、响应拦截、错误提示，接口调用更简洁
+
+- 采用 Vite 替代传统 Webpack，项目启动速度、热更新速度大幅提升，打包体积更小
+
+- 目录结构规范清晰，分层明确，完全贴合企业级中后台项目开发标准，可直接迭代商用功能
+
+---
+
+# README 2：vue\-node\-fullstack\-demo
+
+## 项目简介
+
+**vue\-node\-fullstack\-demo** 是一套基于 **Vue3 \+ Node\.js \+ Express \+ MongoDB** 搭建的完整前后端分离全栈实战项目。项目涵盖前端页面开发、后端接口编写、数据库数据持久化、用户身份认证、接口权限校验等全流程功能，完整还原企业级前后端分离开发模式，适合全栈技术学习、接口联调实战、JWT认证及数据库CRUD操作练习，是轻量化、高完整性的全栈入门实战项目。
+
+## 技术栈
+
+### 前端技术栈
+
+- 核心框架：Vue3 \+ Vite
+
+- 路由管理：Vue Router
+
+- 状态管理：Pinia
+
+- 网络请求：Axios
+
+### 后端技术栈
+
+- 服务框架：Node\.js \+ Express
+
+- 数据库：MongoDB
+
+- 数据建模：Mongoose ODM
+
+- 身份认证：JWT 无状态令牌认证
+
+- 数据加密：bcryptjs 密码加密
+
+- 跨域处理：CORS 跨域中间件
+
+## 项目功能
+
+- ✅ 标准前后端分离架构搭建，完美解决浏览器跨域请求问题
+
+- ✅ 完整用户体系：用户注册、账号密码登录、JWT Token签发与自动校验
+
+- ✅ 密码加密存储，杜绝明文存储风险，保障用户数据安全
+
+- ✅ 标准化数据库模型设计，封装通用数据增删改查CRUD接口
+
+- ✅ 前端Axios拦截器统一携带Token，实现接口权限拦截校验
+
+- ✅ 全流程接口联调，前端动态渲染后端数据库真实数据，业务闭环完整
+
+## 项目结构
+
+```Plain Text
+vue-node-fullstack-demo
+├── client                 # Vue3 前端项目
+│   ├── src                # 前端核心源码
+│   └── package.json       # 前端依赖配置
+├── server                 # Node 后端服务项目
+│   ├── config             # 项目全局配置（数据库、密钥等）
+│   ├── models             # MongoDB数据模型定义
+│   ├── routes             # 后端接口路由配置
+│   ├── controller         # 接口核心业务逻辑
+│   ├── middleware         # 自定义中间件（权限校验、参数校验）
+│   ├── app.js             # 后端服务入口文件
+│   └── package.json       # 后端依赖配置
+└── README.md              # 项目说明文档
+```
+
+## 快速启动
+
+### 1\. 启动后端服务（需本地安装MongoDB）
+
+```Plain Text
+cd server
+npm install
+node app.js
+```
+
+### 2\. 启动前端项目
+
+```Plain Text
+cd client
+npm install
+npm run dev
+```
+
+## 项目亮点
+
+- 完整复刻企业级前后端分离开发闭环，涵盖页面展示、接口请求、服务处理、数据存储全链路
+
+- 采用JWT无状态认证方案，无需存储会话，适配分布式服务，贴合企业主流权限方案
+
+- 后端采用分层架构设计，模型、路由、业务逻辑、配置分离，代码解耦、易于扩展维护
+
+- 前后端代码规范统一，注释清晰，适合零基础巩固全栈开发基础、练习接口联调
+
+- 可快速二次扩展迭代，支持新增文件上传、数据分页、角色权限、数据导出等商用功能
+
+## 适用场景
+
+- 前后端分离架构学习与实战练手
+
+- Node\.js \+ MongoDB 后端接口开发学习
+
+- Vue全栈项目实战、简历项目亮点填充
+
+- 小型轻量化业务系统二次开发迭代
